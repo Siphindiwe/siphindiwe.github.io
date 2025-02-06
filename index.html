@@ -1,5 +1,75 @@
+
 <h1>Hi! My name is Siphindiwe</h1>
 <p>Nice to meet you... If you would like to know more about me, grab my hand and lets scroll down </p>
+
+<style>
+    img {
+      width: 210mm; 
+      height: 85mm; 
+      object-fit: cover; 
+      display: block; 
+      margin: 20px auto; 
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    body {
+        background-color: #fde6f8;
+        color: #333;
+    }
+
+    section {
+        margin: 40px auto;
+        padding: 40px;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        width: 60%;
+    }
+
+    h1, h2, h3, h4 {
+        color:rgb(168, 32, 178);
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .sidebar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px; /* Adjust size */
+}
+
+.left-sidebar {
+    left: 10px;
+}
+
+.right-sidebar {
+    right: 10px;
+}
+
+.logo {
+    display: block;
+    width: 60px; /* Adjust size */
+    margin: 20px 0;
+    opacity: 0.7; /* Makes it blend a bit */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo:hover {
+    opacity: 1; /* Brighten on hover */
+}
+
+  </style>
+
+<img src="images/Head Shot.jpg" alt="Hello World" />
+
 
 <section>
     <h2>About Me</h2>
@@ -20,19 +90,73 @@
         <li>VHDL</li>
         <li>Javascript</li>
         <li>CSS</li>
-        <li>Assembly</li>
+        <li>Scratch</li>
     </ul>
 </section>
 
 <section>
-    <h4>Portfolio</h4>
-    <p>Still loading ;)</p>
+    <div class="Portfolio">
+    <div class = "my projects">
+    <h4>Polynomial Solver: Python</h4> 
+    <p>
+        Created a mathematical program that can solve polynomials up to the n^th degree. The basis of this Polynomial solver is to find 
+        the unknown roots and zeroes of the polynomial. This application is best used in the context of solving engineering, physics and
+        mathematical problems. This applictaion is most similar to wolfram alpha.
+    </p>
+    </div>
+
+    <div class = "my projects">
+    <h4>Hangman: Python</h4> 
+    <p>
+        A popular word game where in the program, it takes input from two players. The first user to creates a word that the second user 
+        needs to guess. The number of guesses that are given to the second player are equal to the number of lines required to draw the 
+        hanged man. Upon unsuccessful guesses, a full picture of the hanged man is displayed. Upon a succeful guess, victory is declared
+        to the second player.
+    </p>
+    </div>
+
+    <div class = "my projects">
+    <h4>Shopping Cart: Javascript</h4> 
+    <p>
+        The program entails creating objects, arrays and array manipulation to track and calculate the amount of the shopping Cart
+        filled with items. 
+    </p>
+    </div>
+
+    <div class = "my projects">
+    <h4>Ping Pong: VHDL</h4> 
+    <p>
+        The ping pong game was interfaced with hardware on a breadboard and the vhdl board for which LED's lights provide feedback on
+        the mode the game was in. The programming was logic based using the concepts of gates.
+    </p>
+    </div>
+
+    <div class = "my projects">
+    <h4>Cafe Menu: CSS</h4> 
+    <p> 
+        CSS was used to enhance the graphics of a cafe menu. This includes colours, using different text styles and alignment, addition 
+        of images and use of headings and sections. 
+    </p>
+    </div>
+
+</div>
 </section>
 
-<section>
-    <p>Lets chat a little more, I think I like you: zungusiphindiwe@gmail.com</p>
+<section class="contact">
+    <p>Lets chat a little more, I think I like you: <a href= "mailto: zungusiphindiwe@gmail.com">zungusiphindiwe@gmail.com</a></p>
 </section>
+
+<div class="sidebar left-sidebar">
+<img class="logo" src="C:\Users\Siphi\Pictures\Logos\clogo.jpg" alt="CPLUS Logo">
+
+<img class="logo" src="C:\Users\Siphi\Pictures\Logos\PYTHON.jpg" alt="PYTHON Logo">
+</div>
+
+<div class="sidebar right-sidebar">
+<img class="logo" src="C:\Users\Siphi\Pictures\Logos\JS.jpg" alt="JSS Logo">
+<img class="logo" src="C:\Users\Siphi\Pictures\Logos\scratch.jpg" alt="SCRATCH Logo">
+</div>
 
 <footer> 
-    Ciao for Now, You better see me agin soon!!! 
+    Ciao for Now, You better see me again soon!!!<a href="#">Back to Top</a>
 </footer>
