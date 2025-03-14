@@ -1,156 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-<h1>Hi! My name is Siphindiwe</h1>
-<p>I am an upcoming web developer, in the process of honing my skills in UI/UX design. I currently have one year of experience in coding 
-   under my belt thus far and gaining more hours on the clock to fully become skillful in this trade.</p>
-
-<style>
-    img {
-      width: 210mm; 
-      height: 85mm; 
-      object-fit: cover; 
-      display: block; 
-      margin: 20px auto; 
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    body {
-        background-color: #fde6f8;
-        color: #333;
-    }
-
-    section {
-        margin: 40px auto;
-        padding: 40px;
-        max-width: 900px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        background-color: white;
-        width: 60%;
-    }
-
-    h1, h2, h3, h4 {
-        color:rgb(168, 32, 178);
-        text-align: center;
-    }
-
-    p {
-        text-align: center;
-    }
-
-    .sidebar {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 210px; 
-}
-
-.left-sidebar {
-    left: 10px;
-}
-
-.right-sidebar {
-    right: 10px;
-}
-
-.logo {
-    display: block;
-    width: 175px; 
-    margin: 20px 0;
-    opacity: 0.7; 
-    transition: opacity 0.3s ease-in-out;
-}
-
-.logo:hover {
-    opacity: 1; 
-}
-
-  </style>
-
-<img src="images/Head Shot.jpg" alt="Hello World" />
-
-
-<section>
-    <h2>About Me</h2>
-    <p>I am completing my learnership at Umuzi, specializing as a junior web developer student as part of my 
-        journey of gaining more hours and skills in software coding, more specifically in UI/UX design. Due
-        to this, I am expanding my exposure from hardware coding languages (Assembly and VHDL) to Javascript
-        HTML and CSS.</p>
-</section>
-
-<section>
-    <h3>Skills</h3>
-    <ul>
-        <li>C++</li>
-        <li>HTML</li>
-        <li>Javascript</li>
-        <li>CSS</li>
-        
-    </ul>
-</section>
-
-<section>
-    <div class="Portfolio">
-    <div class = "my projects">
-    <h4>Polynomial Solver: Python</h4> 
-    <p>
-        Created a mathematical program that can solve polynomials up to the n^th degree. The basis of this Polynomial solver is to find 
-        the unknown roots and zeroes of the polynomial. This application is best used in the context of solving engineering, physics and
-        mathematical problems. This applictaion is most similar to wolfram alpha.
-    </p>
-    </div>
-
-    <div class = "my projects">
-    <h4>Hangman: Python</h4> 
-    <p>
-        A popular word game where in the program, it takes input from two players. The first user to creates a word that the second user 
-        needs to guess. The number of guesses that are given to the second player are equal to the number of lines required to draw the 
-        hanged man, this is 10 estimates. Upon a succeful guess, victory is declared.
-        <a href="codes/Hangmancode.pdf" target="_blank">Hangman Code</a>
-    </p>
-    </div>
-
-
-    <div class = "my projects">
-    <h4>Ping Pong: Python</h4> 
-    <p>
-      This is a two player game, that fashions tennis where a ball bounces between two players and points
-      accumulate for the player who manages to net let the ball go out of bounds when it is their turn to
-      serve the ball. 
-      <a href="codes/pingpongpython.pdf" target="_blank">Ping Pong Code</a>
-
-    </p>
-    </div>
-
-    <div class = "my projects">
-        <h4>Interest Calculator: Python</h4> 
-        <p>
-        The program accepts user input, where the user is an individual wanting a loan and the program 
-        calculates the interest that will be earned on the loan over a 12 month period.
-          <a href="codes/InterestCalculatorforloans.pdf" target="_blank">Interest Calculator Code</a>
     
-        </p>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Siphindiwe Zungu</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-</div>
-</section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".nav-links a");
+            const sections = document.querySelectorAll(".section");
+    
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.classList.add("active-section");
+                    } else {
+                        section.classList.remove("active-section");
+                    }
+                });
+            }
+    
+            links.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const sectionId = this.getAttribute("href").substring(1);
+                    showSection(sectionId);
+                });
+            });
 
-<section class="contact">
-    <p>For more info and enquiries, please contact me on: <a href= "mailto: zungusiphindiwe@gmail.com">zungusiphindiwe@gmail.com</a></p>
-</section>
+            showSection("about");
+        });
+    </script>
 
-<div class="sidebar left-sidebar">
-<img class="logo" src="Logos\clogo.jpg" alt="CPLUS Logo">
+    <section class="hero">
+        <img src="headShot.jpg" alt="Hero Image" class="hero-image">
+        <div class="loader"></div>
+    </section>
 
-<img class="logo" src="Logos\PYTHON.jpg" alt="PYTHON Logo">
-</div>
+   
+    <section class="welcome">
+        <h1>Welcome!</h1>
+        <p>Please feel free to browse through to find out more about my skills and journey into the tech space.</p>
+    </section>
 
-<div class="sidebar right-sidebar">
-<img class="logo" src="Logos\JS.jpg" alt="JSS Logo">
-</div>
+    <section id="about" class="section">
+        <h1>About Me</h1>
+        <p>I am completing my learnership at Umuzi, specializing as a junior web developer student as part of my 
+            journey of gaining more hours and skills in software coding, more specifically in UI/UX design. Due
+            to this, I am expanding my exposure from hardware coding languages (Assembly and VHDL) to Javascript
+            HTML and CSS.</p>
+    </section>
 
-<footer> 
-    Thank you for reading <a href="#">Back to Top</a>
-</footer>
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>My first introduction to HTML was through a FreeCodeCamp tutorial that served as an introduction to HTML elements.</p>
+            </div>
+    
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Due to my web development stream, there is a focus on developing JavaScript skills, mainly in Data Structures and Object-Oriented Programming.</p>
+            </div>
+    
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>My main focus in CSS is on designing graphical user interfaces. My first interaction with CSS was creating a Café Menu on FreeCodeCamp.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+    
+            <div class="project">
+                <h4>Hangman: Python</h4> 
+                <p>
+                    A popular word game where the program takes input from two players. The second player must 
+                    guess a word within 10 attempts, similar to the classic Hangman game.
+                </p>
+            </div>
+    
+            <div class="project">
+                <h4>Ping Pong: Python</h4> 
+                <p>
+                    A two-player game similar to tennis, where a ball bounces between players and points 
+                    are earned when the opponent fails to return the ball.
+                </p>
+            </div>
+    
+            <div class="project">
+                <h4>Interest Calculator: Python</h4> 
+                <p>
+                    A financial tool that calculates the interest on a loan over a 12-month period based 
+                    on user input.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <h1>Contact</h1>
+        <p>For more info and enquiries, please contact me on: <a href= "mailto: zungusiphindiwe@gmail.com">zungusiphindiwe@gmail.com</a></p>
+    </section>
+  
+
+</body>
+</html>
