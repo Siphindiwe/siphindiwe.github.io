@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
+
 .navbar {
     background: white;
     padding: 15px 0;
@@ -52,7 +52,7 @@
     color: gray;
 }
 
-/* Hero Section */
+
 .myimage {
     position: relative;
     width: 100%;
@@ -70,7 +70,7 @@
     object-fit: cover;
 }
 
-/* Loading Animation */
+
 .loader {
     position: absolute;
     width: 30px;
@@ -86,7 +86,7 @@
     100% { transform: rotate(360deg); }
 }
 
-/* Welcome Section */
+
 .welcome {
     text-align: center;
     padding: 50px 20px;
