@@ -23,6 +23,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .logo {
@@ -61,7 +63,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f8f8f8;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .my-image {
@@ -104,8 +106,8 @@ html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     width: 60%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top:80px;
+    margin-bottom: 80px;
 }
 
 .active-section {
@@ -125,5 +127,11 @@ p{
     text-align: center;
 }
 
-
+.skill p, .project p{
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
   
