@@ -65,7 +65,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f8f8f8;
-    margin-top: 80px auto;
+    margin: 80px auto;
 }
 
 .my-image {
@@ -74,7 +74,7 @@
     max-height: 50vh;
     object-fit: cover;
     border-radius: 10px;
-    display: none;
+    display: block;
 }
 
 .funky-name{
@@ -93,6 +93,7 @@
     text-align: center;
     padding: 50px 20px;
     background: #eef3fa;
+    margin-bottom: 50px;
 }
 
 .welcome h1 {
