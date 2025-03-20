@@ -59,8 +59,8 @@
     position: relative;
     width: 100%;
     max-width: 1200px;
-    height: auto;
-    max-height: 80vh;
+    height: 80vh;
+    max-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
