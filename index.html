@@ -20,14 +20,16 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </nav>
 
-    <div class="funky-name">Siphindiwe</div>
+        <div class="funky-name">Siphindiwe</div>
+    </nav>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const links = document.querySelectorAll(".nav-links a");
             const sections = document.querySelectorAll(".section");
+            const imageSection = document.querySelector(".myimage");
+            const funkyName = document.querySelector(".funky-name");
     
             function showSection(sectionId) {
                 sections.forEach(section => {
@@ -37,11 +39,30 @@
                         section.classList.remove("active-section");
                     }
                 });
+    
+                // Show image only on welcome section
+                if (sectionId === "home") {
+                    imageSection.style.display = "flex";
+                    funkyName.style.display = "none";
+                } else {
+                    imageSection.style.display = "none";
+                    funkyName.style.display = "block";
+                }
             }
     
-           
+            links.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const sectionId = this.getAttribute("href").substring(1);
+                    showSection(sectionId);
+                });
+            });
+    
+            // Set initial view (Welcome)
+            showSection("home");
         });
     </script>
+    
 
     <section class="myimage">
         <img src="headShot.jpg" alt="myimage" class="my-image">
