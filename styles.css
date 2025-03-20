@@ -74,8 +74,18 @@
     max-height: 50vh;
     object-fit: cover;
     border-radius: 10px;
+    display: none;
 }
 
+.funky-name{
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: rgb(168, 32, 178);
+}
 
 
 
