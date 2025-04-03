@@ -1,172 +1,188 @@
-<nav class="navbar">
-  <div class="container">
-    <a href="#" class="logo">Siphindiwe Zungu</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="funky-name">Siphindiwe</div>
-</nav>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Siphindiwe Zungu</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="funky-name">Siphindiwe</div>
+    </nav>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('.nav-links a')
-    const sections = document.querySelectorAll('.section')
-    const imageSection = document.querySelector('.myimage')
-    const funkyName = document.querySelector('.funky-name')
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('.nav-links a')
+        const sections = document.querySelectorAll('.section')
+        const imageSection = document.querySelector('.myimage')
+        const funkyName = document.querySelector('.funky-name')
 
-    function showSection(sectionId) {
-      sections.forEach((section) => {
-        if (section.id === sectionId) {
-          section.classList.add('active-section')
-        } else {
-          section.classList.remove('active-section')
+        function showSection(sectionId) {
+          sections.forEach((section) => {
+            if (section.id === sectionId) {
+              section.classList.add('active-section')
+            } else {
+              section.classList.remove('active-section')
+            }
+          })
+
+          if (sectionId === 'home') {
+            imageSection.style.display = 'flex'
+            funkyName.style.display = 'none'
+          } else {
+            imageSection.style.display = 'none'
+            funkyName.style.display = 'block'
+          }
         }
+
+        links.forEach((link) => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault()
+            const sectionId = this.getAttribute('href').substring(1)
+            showSection(sectionId)
+          })
+        })
+
+        showSection('home')
       })
+    </script>
 
-      if (sectionId === 'home') {
-        imageSection.style.display = 'flex'
-        funkyName.style.display = 'none'
-      } else {
-        imageSection.style.display = 'none'
-        funkyName.style.display = 'block'
-      }
-    }
+    <section class="myimage">
+      <img src="headShot.jpg" alt="myimage" class="my-image" />
+    </section>
 
-    links.forEach((link) => {
-      link.addEventListener('click', function (event) {
-        event.preventDefault()
-        const sectionId = this.getAttribute('href').substring(1)
-        showSection(sectionId)
-      })
-    })
-
-    showSection('home')
-  })
-</script>
-
-<section class="myimage">
-  <img src="headShot.jpg" alt="myimage" class="my-image" />
-</section>
-
-<section class="welcome">
-  <h1>Welcome!</h1>
-  <p>
-    Please feel free to browse through to find out more about my skills and
-    journey into the tech space.
-  </p>
-</section>
-
-<section id="about" class="section">
-  <h1>About Me</h1>
-  <p>
-    As part of my journey to gain more experience and enhance my skills in
-    software development, I am focusing particularly on UI/UX design. This is in
-    efforts of expanding my skills beyond hardware-oriented programming
-    languages like Assembly and VHDL to web technologies such as JavaScript,
-    HTML, and CSS.
-  </p>
-
-  <div class="about-links">
-    <a href="myResume.pdf" target="_blank" class="icon-link"
-      ><i class="fas fa-file-pdf"></i> Resume</a
-    >
-    <a
-      href="https://www.linkedin.com/in/siphindiwe-zungu-15441435a/"
-      target="_blank"
-      class="icon-link"
-      ><i class="fab fa-linkedin"></i> LinkedIn</a
-    >
-    <a href="https://github.com/Siphindiwe" target="_blank" class="icon-link"
-      ><i class="fab fa-github"></i> GitHub</a
-    >
-  </div>
-</section>
-
-<section id="skills" class="section">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    <div class="skill">
-      <h3>HTML</h3>
+    <section class="welcome">
+      <h1>Welcome!</h1>
       <p>
-        I was first introduced to HTML through a FreeCodeCamp tutorial, which
-        provided a foundational understanding of HTML elements.
+        Please feel free to browse through to find out more about my skills and
+        journey into the tech space.
       </p>
-    </div>
+    </section>
 
-    <div class="skill">
-      <h3>JavaScript</h3>
+    <section id="about" class="section">
+      <h1>About Me</h1>
       <p>
-        As part of my web development specialization, I am actively developing
-        my JavaScript skills, with a focus on Data Structures and
-        Object-Oriented Programming.
+        As part of my journey to gain more experience and enhance my skills in
+        software development, I am focusing particularly on UI/UX design. This
+        is in efforts of expanding my skills beyond hardware-oriented
+        programming languages like Assembly and VHDL to web technologies such as
+        JavaScript, HTML, and CSS.
       </p>
-    </div>
 
-    <div class="skill">
-      <h3>CSS</h3>
+      <div class="about-links">
+        <a href="myResume.pdf" target="_blank" class="icon-link"
+          ><i class="fas fa-file-pdf"></i> Resume</a
+        >
+        <a
+          href="https://www.linkedin.com/in/siphindiwe-zungu-15441435a/"
+          target="_blank"
+          class="icon-link"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        <a
+          href="https://github.com/Siphindiwe"
+          target="_blank"
+          class="icon-link"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill">
+          <h3>HTML</h3>
+          <p>
+            I was first introduced to HTML through a FreeCodeCamp tutorial,
+            which provided a foundational understanding of HTML elements.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <p>
+            As part of my web development specialization, I am actively
+            developing my JavaScript skills, with a focus on Data Structures and
+            Object-Oriented Programming.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>CSS</h3>
+          <p>
+            My primary focus in CSS is designing graphical user interfaces. My
+            first interaction with CSS involved creating a café menu as part of
+            a FreeCodeCamp project.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h4>Hangman: Python</h4>
+        <p>
+          A classic word-guessing game where the program accepts input from two
+          players. The second player must guess the word within 10 attempts,
+          similar to the traditional Hangman game.
+          <a
+            href="https://github.com/Siphindiwe/siphindiwe.github.io/blob/main/hangman.py"
+            target="_blank"
+            >Hangman Code</a
+          >
+        </p>
+      </div>
+
+      <div class="project">
+        <h4>Ping Pong: Python</h4>
+        <p>
+          A two-player game inspired by table tennis, where the ball bounces
+          between players, and points are awarded when the opponent fails to
+          return the ball.
+          <a
+            href="https://github.com/Siphindiwe/siphindiwe.github.io/blob/main/main.py"
+            target="_blank"
+            >Ping Pong Game</a
+          >
+        </p>
+      </div>
+
+      <div class="project">
+        <h4>Interest Calculator: Python</h4>
+        <p>
+          A financial tool that calculates loan interest over a 12-month period
+          based on user input.
+          <a
+            href="https://github.com/Siphindiwe/siphindiwe.github.io/blob/main/interestRate.py"
+            target="_blank"
+            >Interest Calculator</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h1>Contact</h1>
       <p>
-        My primary focus in CSS is designing graphical user interfaces. My first
-        interaction with CSS involved creating a café menu as part of a
-        FreeCodeCamp project.
+        For more info and enquiries, please contact me on:
+        <a href="mailto: zungusiphindiwe@gmail.com"
+          >zungusiphindiwe@gmail.com</a
+        >
       </p>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h4>Hangman: Python</h4>
-    <p>
-      A classic word-guessing game where the program accepts input from two
-      players. The second player must guess the word within 10 attempts, similar
-      to the traditional Hangman game.
-      <a
-        href="https://github.com/Siphindiwe/siphindiwe.github.io/blob/main/hangman.py"
-        target="_blank"
-        >Hangman Code</a
-      >
-    </p>
-  </div>
-
-  <div class="project">
-    <h4>Ping Pong: Python</h4>
-    <p>
-      A two-player game inspired by table tennis, where the ball bounces between
-      players, and points are awarded when the opponent fails to return the
-      ball.
-      <a
-        href="https://github.com/Siphindiwe/siphindiwe.github.io/blob/main/main.py"
-        target="_blank"
-        >Ping Pong Game</a
-      >
-    </p>
-  </div>
-
-  <div class="project">
-    <h4>Interest Calculator: Python</h4>
-    <p>
-      A financial tool that calculates loan interest over a 12-month period
-      based on user input.
-      <a
-        href="https://github.com/Siphindiwe/siphindiwe.github.io/blob/main/interestRate.py"
-        target="_blank"
-        >Interest Calculator</a
-      >
-    </p>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <h1>Contact</h1>
-  <p>
-    For more info and enquiries, please contact me on:
-    <a href="mailto: zungusiphindiwe@gmail.com">zungusiphindiwe@gmail.com</a>
-  </p>
-</section>
+    </section>
+  </body>
+</html>
