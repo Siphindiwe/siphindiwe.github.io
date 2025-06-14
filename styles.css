@@ -241,3 +241,12 @@ p {
     padding: 30px 15px;
   }
 }
+
+:root {
+  --bg: #f4f3ff;
+  --accent: #a820b2;
+  --accent-light: #d267e7;
+  --text: #1e1e1e;
+  --card: #ffffff;
+  --hover: #f0d9ff;
+}
