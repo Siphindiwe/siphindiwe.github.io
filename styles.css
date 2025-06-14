@@ -138,7 +138,6 @@ h4 {
 
 p {
   text-align: center;
-  font-size: 10vw;
 }
 
 .skill p,
@@ -160,7 +159,7 @@ p {
 }*/
 
 .about-links {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   gap: 15px;
@@ -177,4 +176,11 @@ p {
 
 .icon-link img:hover {
   transform: scale(1.1);
+}
+
+#contact .about-links {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
