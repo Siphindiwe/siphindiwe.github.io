@@ -1,16 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -18,29 +19,21 @@
         <a href="#" class="logo">Siphindiwe Zungu</a>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="myResume.pdf" target="_blank">Download CV</a></li>
         </ul>
       </div>
       <div class="funky-name">Siphindiwe</div>
     </nav>
 
     <div class="myimage">
-      <img src="headShot.jpg" alt="My headshot" class="my-image">
+      <img src="headShot.jpg" alt="My headshot" class="my-image" />
     </div>
 
-    <section class="welcome">
+    <section id="home" class="welcome">
       <h1>Welcome!</h1>
-      <p>
-        Please feel free to browse through to find out more about my skills and
-        journey into the tech space.
-      </p>
-    </section>
-
-    <section id="about" class="section">
-      <h1>About Me</h1>
       <p>
         I am passionate about building beautiful and functional user interfaces.
         Currently enhancing my web development skills through hands-on projects
@@ -52,25 +45,21 @@
       <h2>Skills</h2>
       <div class="skills-container">
         <div class="skill">
-          <h3>HTML</h3>
-          <p>
-            Gained foundational knowledge through FreeCodeCamp, including
-            structuring pages and semantic markup.
-          </p>
+          <h3><img src="icons/html5.png" alt="HTML icon" width="20" /> HTML</h3>
         </div>
         <div class="skill">
-          <h3>JavaScript</h3>
-          <p>
-            Learning advanced concepts like OOP and data structures to build
-            interactive applications.
-          </p>
+          <h3><img src="icons/css3.png" alt="CSS icon" width="20" /> CSS</h3>
         </div>
         <div class="skill">
-          <h3>CSS</h3>
-          <p>
-            Focused on layout, animations, and responsive design to enhance user
-            experience.
-          </p>
+          <h3>
+            <img src="icons/javascript.png" alt="JavaScript icon" width="20" />
+            JavaScript
+          </h3>
+        </div>
+        <div class="skill">
+          <h3>
+            <img src="icons/python.png" alt="Python icon" width="20" /> Python
+          </h3>
         </div>
       </div>
     </section>
@@ -113,35 +102,31 @@
     </section>
 
     <section id="contact" class="section">
-  <h1>Contact</h1>
-  <p>
-    Email me at
-    <a href="mailto:zungusiphindiwe@gmail.com">zungusiphindiwe@gmail.com</a>
-  </p>
+      <h1>Contact</h1>
+      <p>
+        Email me at
+        <a href="mailto:zungusiphindiwe@gmail.com">zungusiphindiwe@gmail.com</a>
+      </p>
 
-  <p class="contact-label">View my CV, LinkedIn, and GitHub:</p>
+      <p class="contact-label">View my LinkedIn and GitHub:</p>
 
-  <div class="about-links">
-    <a href="myResume.pdf" target="_blank" class="icon-link animated-icon">
-      <img src="adobeLogoForResume.png" alt="Resume" class="icon-image">
-    </a>
-    <a
-      href="https://www.linkedin.com/in/siphindiwe-zungu-15441435a/"
-      target="_blank"
-      class="icon-link animated-icon"
-    >
-      <img src="LinkedIn.png" alt="LinkedIn" class="icon-image">
-    </a>
-    <a
-      href="https://github.com/Siphindiwe"
-      target="_blank"
-      class="icon-link animated-icon"
-    >
-      <img src="GithubProfile.png" alt="GitHub" class="icon-image">
-    </a>
-  </div>
-</section>
-
+      <div class="about-links">
+        <a
+          href="https://www.linkedin.com/in/siphindiwe-zungu-15441435a/"
+          target="_blank"
+          class="icon-link animated-icon"
+        >
+          <img src="LinkedIn.png" alt="LinkedIn" class="icon-image" />
+        </a>
+        <a
+          href="https://github.com/Siphindiwe"
+          target="_blank"
+          class="icon-link animated-icon"
+        >
+          <img src="GithubProfile.png" alt="GitHub" class="icon-image" />
+        </a>
+      </div>
+    </section>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -164,7 +149,8 @@
         links.forEach((link) => {
           link.addEventListener('click', function (event) {
             event.preventDefault();
-            showSection(this.getAttribute('href').substring(1));
+            const sectionId = this.getAttribute('href').substring(1);
+            showSection(sectionId);
           });
         });
 
