@@ -290,14 +290,6 @@ a:hover {
   gap: 10px;
 }
 
-.skill {
-  position: relative;
-  width: 30%;
-  height: 20vh;
-  max-height: 40vh;
-  display: flex;
-}
-
 .skill h3::before,
 .project h4::before {
   content: '';
